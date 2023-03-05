@@ -1,5 +1,6 @@
 package project.lunch.repository;
 
+import jakarta.transaction.Transactional;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest
+@Transactional
 class MenuRepositoryTest {
 
     @Autowired
@@ -23,8 +25,5 @@ class MenuRepositoryTest {
 
         Menu findMenu = menuRepository.findMenuByName("menu1");
         Assertions.assertEquals(menu.getName(), findMenu.getName());
-
-        //System.out.println(menu.toString());
-        //System.out.println(findMenu.toString());
     }
 }

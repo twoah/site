@@ -15,11 +15,10 @@ public class Menu {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
-
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="categoryId")
+    @JoinColumn(name="categoryId", referencedColumnName = "id")
     Category category;
 
     public Menu(int id, String name, String description) {
