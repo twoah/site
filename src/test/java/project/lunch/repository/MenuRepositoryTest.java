@@ -5,6 +5,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import project.lunch.vo.Category;
 import project.lunch.vo.Menu;
 
 import java.util.List;
@@ -18,12 +19,18 @@ class MenuRepositoryTest {
     @Autowired
     MenuRepository menuRepository;
 
+    @Autowired
+    CategoryRepository categoryRepository;
     @Test
-    public void selectMenu(){
-        Menu menu = new Menu(1, "menu1","1");
+    public void findMenuByCategory(){
+
+        Category category =  new Category("category1");
+        categoryRepository.save(category);
+        Menu menu = new Menu("menu1", "des1", category);
         menuRepository.save(menu);
 
         Menu findMenu = menuRepository.findMenuByName("menu1");
         Assertions.assertEquals(menu.getName(), findMenu.getName());
+
     }
 }

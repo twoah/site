@@ -22,5 +22,8 @@ public class Place {
     private String name;
     private String description;
     private String position;
-    private String categoryId;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="category_id", referencedColumnName = "id")
+    Category category;
 }

@@ -18,8 +18,8 @@ public class Menu {
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="categoryId", referencedColumnName = "id")
-    Category category;
+    @JoinColumn(name="category_id", referencedColumnName = "id")
+    private Category category;
 
     public Menu(int id, String name, String description) {
         this.id = id;
@@ -27,4 +27,9 @@ public class Menu {
         this.description = description;
     }
 
+    public Menu(String name, String description, Category category) {
+        this.name = name;
+        this.description = description;
+        this.category = category;
+    }
 }
