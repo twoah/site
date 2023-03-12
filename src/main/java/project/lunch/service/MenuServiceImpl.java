@@ -18,4 +18,11 @@ public class MenuServiceImpl implements MenuService{
     public List<Menu> getMenusByCategoryName(String categoryName) {
         return menuRepository.findMenusByCategoryName(categoryName);
     }
+
+    @Override
+    public void save(Menu menu) {
+        menuRepository.save(menu);
+    }
+
+
 }

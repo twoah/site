@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="includes/header.html :: head">
+<body>
+<div th:insert="/includes/nav.html"></div>
+<div class="container">
+    <div class="m-5">
+        <h3>오늘 뭐먹지?</h3>
+        <p>대학생, 직장인이라면 매일 고민하게 되는 점심 메뉴,
+            <br>룰렛으로 점심을 결정해보세요.</p>
+    </div>
+    <div class="d-sm-flex mb-5">
+        <canvas id="canvas" class="canvas"
+                width="500" height="500"
+                data-responsiveMinWidth="180"
+                data-responsiveScaleHeight="true"
+                onClick="startSpin();">
+        </canvas>
+    </div>
+    <div class="mb-5">
+        <h3>룰렛 편집하기</h3>
+        <p>점심 메뉴를 추가/삭제해서 룰렛을 돌려보세요.</p>
+        <div>
+
+            <button class="btn-outline-info pt-1 ps-2 pe-2 pt-1 rounded-2">추가</button>
+        </div>
+    </div>
+</div>
+<div th:insert="/includes/footer.html"></div>
+
+<script>
+    let datas = [
+        {'fillStyle': '#eae56f', 'text': '한식'},
+        {'fillStyle': '#89f26e', 'text': '중식'},
+        {'fillStyle': '#7de6ef', 'text': '양식'},
+        {'fillStyle': '#e7706f', 'text': '일식'},
+        {'fillStyle': '#eae56f', 'text': '한식'},
+        {'fillStyle': '#89f26e', 'text': '중식'},
+        {'fillStyle': '#7de6ef', 'text': '분식'},
+        {'fillStyle': '#e7706f', 'text': '도시락'},
+        {'fillStyle': '#eae56f', 'text': '한식'},
+        {'fillStyle': '#89f26e', 'text': '중식'},
+        {'fillStyle': '#7de6ef', 'text': '양식'},
+        {'fillStyle': '#e7706f', 'text': '일식'},
+        {'fillStyle': '#eae56f', 'text': '한식'},
+        {'fillStyle': '#89f26e', 'text': '중식'},
+        {'fillStyle': '#7de6ef', 'text': '분식'},
+        {'fillStyle': '#e7706f', 'text': '도시락'},
+        {'fillStyle': '#eae56f', 'text': '한식'},
+        {'fillStyle': '#89f26e', 'text': '중식'},
+        {'fillStyle': '#7de6ef', 'text': '양식'},
+        {'fillStyle': '#e7706f', 'text': '일식'},
+    ]
+    let theWheel = new Winwheel({
+        'numSegments': datas.length,
+        'textFontSize': 28,
+        'responsive': true,
+        'segments':  datas,
+        'animation':
+            {
+                'type': 'spinToStop',
+                'duration': 5,     // Duration in seconds.
+                'spins': 4,     // Number of complete spins.
+                'callbackFinished' : alertPrize
+            }
+    });
+
+    function startSpin() {
+        theWheel.stopAnimation(false);
+        // Reset the rotation angle to less than or equal to 360 so spinning again
+        // works as expected. Setting to modulus (%) 360 keeps the current position.
+        theWheel.rotationAngle = theWheel.rotationAngle % 360;
+        theWheel.startAnimation();
+
+    }
+
+    // Called when the animation has finished.
+    function alertPrize(indicatedSegment)
+    {
+        alert("You have won " + indicatedSegment.text);
+    }
+</script>
+</body>
+</html>

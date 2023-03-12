@@ -13,19 +13,13 @@ public class Menu {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Long id;
     private String name;
     private String description;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="category_id", referencedColumnName = "id")
+    @JoinColumn(name="category_id")
     private Category category;
-
-    public Menu(int id, String name, String description) {
-        this.id = id;
-        this.name = name;
-        this.description = description;
-    }
 
     public Menu(String name, String description, Category category) {
         this.name = name;

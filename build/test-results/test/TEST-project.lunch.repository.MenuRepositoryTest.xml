@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="project.lunch.repository.MenuRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-05T14:13:10" hostname="iahyeon-ui-MacBookPro.local" time="0.155">
+<testsuite name="project.lunch.repository.MenuRepositoryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-12T05:11:45" hostname="iahyeon-ui-MacBookPro.local" time="0.146">
   <properties/>
-  <testcase name="findMenuByCategory()" classname="project.lunch.repository.MenuRepositoryTest" time="0.155"/>
-  <system-out><![CDATA[23:13:08.888 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [MenuRepositoryTest]: using SpringBootContextLoader
-23:13:08.891 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [project.lunch.repository.MenuRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
-23:13:08.891 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [project.lunch.repository.MenuRepositoryTest]: MenuRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-23:13:08.903 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [MenuRepositoryTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
-23:13:08.939 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ahhyeon/Desktop/spring/lunch/build/classes/java/main/project/lunch/LunchApplication.class]
-23:13:08.940 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration project.lunch.LunchApplication for test class project.lunch.repository.MenuRepositoryTest
-23:13:08.983 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [MenuRepositoryTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
-23:13:08.984 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [MenuRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
+  <testcase name="findMenuByCategory()" classname="project.lunch.repository.MenuRepositoryTest" time="0.146"/>
+  <system-out><![CDATA[14:11:43.382 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [MenuRepositoryTest]: using SpringBootContextLoader
+14:11:43.385 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [project.lunch.repository.MenuRepositoryTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+14:11:43.385 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [project.lunch.repository.MenuRepositoryTest]: MenuRepositoryTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+14:11:43.396 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using ContextCustomizers for test class [MenuRepositoryTest]: [DisableObservabilityContextCustomizer, PropertyMappingContextCustomizer, Customizer, ExcludeFilterContextCustomizer, DuplicateJsonObjectContextCustomizer, MockitoContextCustomizer, TestRestTemplateContextCustomizer]
+14:11:43.432 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/ahhyeon/Desktop/spring/lunch/build/classes/java/main/project/lunch/LunchApplication.class]
+14:11:43.433 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration project.lunch.LunchApplication for test class project.lunch.repository.MenuRepositoryTest
+14:11:43.477 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners for test class [MenuRepositoryTest]: [ServletTestExecutionListener, DirtiesContextBeforeModesTestExecutionListener, ApplicationEventsTestExecutionListener, MockitoTestExecutionListener, DependencyInjectionTestExecutionListener, DirtiesContextTestExecutionListener, TransactionalTestExecutionListener, SqlScriptsTestExecutionListener, EventPublishingTestExecutionListener, RestDocsTestExecutionListener, MockRestServiceServerResetTestExecutionListener, MockMvcPrintOnlyOnFailureTestExecutionListener, WebDriverTestExecutionListener, MockWebServiceServerTestExecutionListener, ResetMocksTestExecutionListener]
+14:11:43.478 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: class [MenuRepositoryTest], class annotated with @DirtiesContext [false] with mode [null]
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -19,20 +19,20 @@
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v3.0.4)
 
-2023-03-05T23:13:09.110+09:00  INFO 2537 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : Starting MenuRepositoryTest using Java 17.0.6 with PID 2537 (started by ahhyeon in /Users/ahhyeon/Desktop/spring/lunch)
-2023-03-05T23:13:09.111+09:00  INFO 2537 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
-2023-03-05T23:13:09.371+09:00  INFO 2537 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2023-03-05T23:13:09.404+09:00  INFO 2537 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
-2023-03-05T23:13:09.605+09:00  INFO 2537 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2023-03-05T23:13:09.625+09:00  INFO 2537 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
-2023-03-05T23:13:09.752+09:00  INFO 2537 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2023-03-05T23:13:09.944+09:00  INFO 2537 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6e93b0e7
-2023-03-05T23:13:09.945+09:00  INFO 2537 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2023-03-05T23:13:09.969+09:00  INFO 2537 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
-2023-03-05T23:13:10.340+09:00  INFO 2537 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2023-03-05T23:13:10.345+09:00  INFO 2537 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2023-03-05T23:13:10.570+09:00  WARN 2537 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2023-03-05T23:13:10.764+09:00  INFO 2537 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : Started MenuRepositoryTest in 1.758 seconds (process running for 2.261)
+2023-03-12T14:11:43.603+09:00  INFO 21360 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : Starting MenuRepositoryTest using Java 17.0.6 with PID 21360 (started by ahhyeon in /Users/ahhyeon/Desktop/spring/lunch)
+2023-03-12T14:11:43.604+09:00  INFO 21360 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : No active profile set, falling back to 1 default profile: "default"
+2023-03-12T14:11:43.855+09:00  INFO 21360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-12T14:11:43.886+09:00  INFO 21360 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 23 ms. Found 3 JPA repository interfaces.
+2023-03-12T14:11:44.078+09:00  INFO 21360 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-12T14:11:44.102+09:00  INFO 21360 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-03-12T14:11:44.226+09:00  INFO 21360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-03-12T14:11:44.418+09:00  INFO 21360 --- [    Test worker] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30dd00b6
+2023-03-12T14:11:44.419+09:00  INFO 21360 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-03-12T14:11:44.444+09:00  INFO 21360 --- [    Test worker] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-03-12T14:11:44.823+09:00  INFO 21360 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-12T14:11:44.827+09:00  INFO 21360 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-12T14:11:45.031+09:00  WARN 21360 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-12T14:11:45.226+09:00  INFO 21360 --- [    Test worker] p.lunch.repository.MenuRepositoryTest    : Started MenuRepositoryTest in 1.727 seconds (process running for 2.238)
 Hibernate: insert into category (name) values (?)
 Hibernate: insert into menu (category_id, description, name) values (?, ?, ?)
 Hibernate: select m1_0.id,m1_0.category_id,m1_0.description,m1_0.name from menu m1_0 where m1_0.name=?

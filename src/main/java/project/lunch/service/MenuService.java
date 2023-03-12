@@ -10,4 +10,5 @@ import java.util.List;
 public interface MenuService {
 
     List<Menu> getMenusByCategoryName(String categoryName);
+    void save(Menu menu);
 }
